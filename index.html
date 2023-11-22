@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        margin-top: 0px;
+    }
+    .ta1{
+        margin-left: 100px;
+    }
+
+    .star{
+        position: relative;
+        margin-left: 500px;
+    }
+
+    input{
+            opacity: 0;
+        }
+        .rate{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .zero{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 205px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px -332px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .one{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 40px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 10;
+        }
+        .one:hover{
+            opacity: 1;
+        }
+
+        #one:checked + label > .one{
+            opacity: 1;
+        }
+
+        .two{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 80px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 9;
+        }
+        .two:hover{
+            opacity: 1;
+        }
+
+        #two:checked + label > .two{
+            opacity: 1;
+        }
+
+        .three{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 120px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 8;
+        }
+        .three:hover{
+            opacity: 1;
+        }
+
+        #three:checked + label > .three{
+            opacity: 1;
+        }
+
+        .four{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 162px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 7;
+        }
+        .four:hover{
+            opacity: 1;
+        }
+
+        #four:checked + label > .four{
+            opacity: 1;
+        }
+
+        .five{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 300px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 6;
+        
+        }
+        .five:hover{
+            opacity: 1;
+        }
+
+        #five:checked + label > .five{
+            opacity: 1;
+        }
+
+        .ans{
+            margin-top: 100px;
+        }
+
+        .ans .zero-ans{
+            margin-left: 40px;
+            background-color: aqua;
+            width: 205px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+
+        .ans .one-ans{
+            margin-left: 40px;
+            background-color: yellow;
+            width: 40px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .two-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 80px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .three-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 120px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .four-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 160px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .five-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 205px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .menu{
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: white;
+            border: double aqua 2px;
+            padding: 20px;
+        }
+        button{
+            font-size: 20px;
+            width: 230px;
+            height: 40px;
+            background-color: blueviolet;
+            border-radius: 20px;
+            border: none;
+
+        }
+        button:hover{
+            background-color: darkmagenta;
+        }
+        button:active{
+            background-color: pink;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: azure;
+            text-decoration: none;
+        }
+        .bt1{
+            margin-left: 300px;
+        }
+        .bt2{
+            margin-left: 400px;
+        }
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: aqua;
+            color: violet;
+            height: 100px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+</style>
+<body>
+    <div class="menu">
+        <h1>NHÓM 11: Z-INDEX VÀ IMAGE SPRITE</h1>
+        
+        <button class="bt1"><a href="index.html">Ví dụ Z-Index</a></button>
+        <button class="bt2"><a href="index2.html">Ví dụ Image Sprite</a></button>
+    </div>
+    <br>
+    <br>
+    <textarea name="" id="" cols="70" rows="20" class="ta1">
+        <div class="rate">
+            <div class="zero"></div>
+    
+            <input type="checkbox" id="one">
+            <label for="one"><div class="one"></div></label>
+    
+            <input type="checkbox" id="two">
+            <label for="two"><div class="two"></div></label>
+    
+            <input type="checkbox" id="three">
+            <label for="three"><div class="three"></div></label>
+    
+            <input type="checkbox" id="four">
+            <label for="four"><div class="four"></div></label>
+    
+            <input type="checkbox" id="five">
+            <label for="five"><div class="five"></div></label>
+        </div>
+    
+        <div class="ans">
+            <div class="zero-ans">
+                z-index = 0;
+            </div>
+            <div class="one-ans">
+                1 star: z-index = 5;
+            </div>
+            <div class="two-ans">
+                2 star: z-index = 4;
+            </div>
+            <div class="three-ans">
+                3 star: z-index = 3;
+            </div>
+            <div class="four-ans">
+                4 star: z-index = 2;
+            </div>
+            <div class="five-ans">
+                5 star: z-index = 1;
+            </div>
+        </div>
+    </textarea>
+    <textarea name="" id="" cols="90" rows="20">
+        input{
+            opacity: 0;
+        }
+        .rate{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .zero{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 205px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px -332px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .one{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 40px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 10;
+        }
+        .one:hover{
+            opacity: 1;
+        }
+
+        #one:checked + label > .one{
+            opacity: 1;
+        }
+
+        .two{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 80px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 9;
+        }
+        .two:hover{
+            opacity: 1;
+        }
+
+        #two:checked + label > .two{
+            opacity: 1;
+        }
+
+        .three{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 120px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 8;
+        }
+        .three:hover{
+            opacity: 1;
+        }
+
+        #three:checked + label > .three{
+            opacity: 1;
+        }
+
+        .four{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 162px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 7;
+        }
+        .four:hover{
+            opacity: 1;
+        }
+
+        #four:checked + label > .four{
+            opacity: 1;
+        }
+
+        .five{
+            background-image: url(image/istockphoto-889501264-170667a.jpg.png);
+            width: 300px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            z-index: 6;
+        
+        }
+        .five:hover{
+            opacity: 1;
+        }
+
+        #five:checked + label > .five{
+            opacity: 1;
+        }
+
+        .ans{
+            margin-top: 100px;
+        }
+
+        .ans .zero-ans{
+            margin-left: 40px;
+            background-color: aqua;
+            width: 205px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+
+        .ans .one-ans{
+            margin-left: 40px;
+            background-color: yellow;
+            width: 40px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .two-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 80px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .three-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 120px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .four-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 160px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+        .ans .five-ans{
+            margin-left: 40px;
+            background-color: yellow;;
+            width: 205px;
+            height: 35px;
+            margin-bottom: 1px;
+            text-wrap: nowrap;
+        }
+    </textarea>
+
+    <div class="star">
+        <p><b>Bạn đánh giá bài thuyết trình của nhóm mình được mấy sao: </b></p>
+        <div class="rate">
+            <div class="zero"></div>
+    
+            <input type="checkbox" id="one">
+            <label for="one"><div class="one"></div></label>
+    
+            <input type="checkbox" id="two">
+            <label for="two"><div class="two"></div></label>
+    
+            <input type="checkbox" id="three">
+            <label for="three"><div class="three"></div></label>
+    
+            <input type="checkbox" id="four">
+            <label for="four"><div class="four"></div></label>
+    
+            <input type="checkbox" id="five">
+            <label for="five"><div class="five"></div></label>
+        </div>
+    
+        <div class="ans">
+            <div class="zero-ans">
+                z-index = 0;
+            </div>
+            <div class="one-ans">
+                1 star: z-index = 5;
+            </div>
+            <div class="two-ans">
+                2 star: z-index = 4;
+            </div>
+            <div class="three-ans">
+                3 star: z-index = 3;
+            </div>
+            <div class="four-ans">
+                4 star: z-index = 2;
+            </div>
+            <div class="five-ans">
+                5 star: z-index = 1;
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Cảm ơn cô và các bạn đã xem.
+    </footer>
+</body>
+</html>
